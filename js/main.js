@@ -2,7 +2,7 @@ alert("Tuppy Game");
 
 var main = function () {
 	$("h1").text("GOOO!!!!");
-	$(main).keydown( function(key) {
+	$(this).keydown( function(key) {
 		switch(parseInt(key.which,10)) {
 			case 37:
 				$('img').animate({left: "-=15px"}, 20);
