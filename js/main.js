@@ -1,4 +1,4 @@
-alert("A entity was born, it was meant to be immortal, but someone or something has ripped off this gift from the mother of everything");
+alert("Tuppy Game");
 var x = prompt("Who you are?").toUpperCase();
 if (x === "FRAMPT"){
 	console.log("Welcome, Guiltier's Seeker..., We knew you would been back again");
