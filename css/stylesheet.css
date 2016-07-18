@@ -16,6 +16,12 @@ body div {
 	height: 300px;
 }
 
+.ball {
+
+	width: 60px;
+	background-color: #950000;
+}
+
 h1 {
 	font-family: "Edit Undo Line BRK";
 	font-size: 70px;
