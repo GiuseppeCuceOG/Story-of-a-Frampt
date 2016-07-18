@@ -9,9 +9,10 @@ var main = function () {
 				break;
 			case 39:
 				$('img').animate({left: "+=15px"}, 20);
+				break;
 
 		}
 	});
-}
+};
 
 $(document).ready(main);
