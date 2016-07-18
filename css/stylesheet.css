@@ -8,3 +8,9 @@ img {
 	width: 8%;
 	margin-top: 200px;
 }
+
+body div {
+
+	background-color: #222;
+	height: 300px;
+}
