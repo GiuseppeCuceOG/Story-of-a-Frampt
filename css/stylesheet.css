@@ -6,7 +6,7 @@ body {
 img {
 
 	width: 8%;
-	margin-top: 200px;
+	margin: 0 auto;
 	position: relative;
 }
 
@@ -23,6 +23,7 @@ body div {
 	background-color: #A50000;
 	margin-left: 60px;
 	border-radius: 100%;
+	position: relative;
 
 }
 
