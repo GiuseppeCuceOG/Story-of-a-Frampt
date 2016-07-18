@@ -10,5 +10,6 @@ $(document).ready(function() {
 			case 39:
 				$('img').animate({left: "+=15px"}, 20);
 				break;
+		});
 });
 
