@@ -11,5 +11,5 @@ $(document).ready(function() {
 				break;
 		}
 	});
-	$("h1").text("GOOO!!!!");
+	$("h1").text("VAI TIGRE!!!");
 });
