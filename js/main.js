@@ -1,6 +1,6 @@
 alert("Tuppy Game");
 
-var main = function () {
+$(document).ready( function() {
 	$("h1").text("GOOO!!!!");
 	$(this).keydown( function(key) {
 		switch(key.which) {
@@ -15,4 +15,3 @@ var main = function () {
 	});
 };
 
-$(document).ready(main);
