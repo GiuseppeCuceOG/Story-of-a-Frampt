@@ -1,5 +1,7 @@
 alert("Tuppy Game");
 
-var main = $("h1").text("GOOO!!!!");
+var main = function () {
+	$("h1").text("GOOO!!!!");
+}
 
 $(document).ready(main);
