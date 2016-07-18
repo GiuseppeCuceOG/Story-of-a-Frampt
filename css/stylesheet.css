@@ -21,7 +21,8 @@ body div {
 	width: 20px;
 	height: 20px;
 	background-color: #950000;
-	margin-left: 30px
+	margin-left: 30px;
+	margin-top: -50px;
 }
 
 h1 {
