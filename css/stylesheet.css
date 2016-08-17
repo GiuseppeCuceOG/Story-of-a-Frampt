@@ -1,0 +1,54 @@
+body {
+	background-color: #422333;
+}
+
+h1 {
+	color: #EEEEEE;
+	text-align: center;
+}
+
+div {
+	width: 600px;
+	height: 200px;
+	background-color: #768E23;
+	margin: 0 auto;
+	margin-top: 80px;
+}
+
+div img {
+	height: 200px;
+	width: 200px;
+	display: inline-block;
+}
+
+#right {
+	float: right;
+}
+
+div p {
+	text-align: center;
+	color: #500;
+}
+
+form {
+	text-align: center;
+	margin-top: 30px;
+}
+
+form input {
+	width: 250px;
+}
+
+h3 {
+	color: #EEE;
+	text-align: center;
+}
+
+h3 p {
+	margin-top: 10px;
+}
+
+button {
+	text-align: center;
+	margin-top: 20px;
+}
