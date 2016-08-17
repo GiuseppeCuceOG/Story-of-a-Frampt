@@ -23,9 +23,9 @@ var main = function() {
 			Panther.name = prompt("What is the name of the Panther?");
 			$("p").prepend('<p>'+ " " + Panther.name + " " + 'is there, starving like hell, he does not know why he is so weak, at least he does not remember, the only thing he knows now it is that, he needs food. Here some food, on his right there is a dead body deer, a bit smelling but enough to get better, on his left not really far a lot of colorful mushrooms, What do you choose to eat? The DEER or MUSHROOMS?</p>');
 			
-			var choicee = $("#userchoice").val().toUpperCase();
+			var scelta = $("#userchoice").val().toUpperCase();
 
-			if(choicee === "DEER") {
+			if(scelta === "DEER") {
 				Panther.health = Panther.health + 10;
 				Panther.energy = Panther.energy + 5;
 				Panther.attack = Panther.attack + 3;
