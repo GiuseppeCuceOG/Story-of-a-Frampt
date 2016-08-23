@@ -17,7 +17,8 @@ var Bear = {
 var main = function() {
 		
 		$('#left').click(function() {
-			$('#sceltaCibo').css('display','inline');
+			$('#sceltaCibo').css('display','inline-block');
 		});
-			
+}
+
 $(document).ready(main);
