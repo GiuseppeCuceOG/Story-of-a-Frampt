@@ -16,7 +16,6 @@ var Bear = {
 
 var main = function() {
 
-	confirm("This is the first step of this game, make a choice now");
 	var choice = prompt("What Animal you want to be? PANTHER or BEAR?").toUpperCase();
 		
 		if(choice === "PANTHER") {

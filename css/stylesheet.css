@@ -8,7 +8,7 @@ h1 {
 }
 
 div {
-	width: 600px;
+	width: 500px;
 	height: 200px;
 	background-color: #768E23;
 	margin: 0 auto;
@@ -21,7 +21,14 @@ div img {
 	display: inline-block;
 }
 
-#right {
+#sceltaCibo {
+	margin-bottom: 100px;
+	width: 500px;
+	height: 200px;
+	display: none;
+}
+
+#right, #mushrooms {
 	float: right;
 }
 
@@ -46,6 +53,13 @@ h3 {
 
 h3 p {
 	margin-top: 10px;
+}
+
+h4 {
+	color: #EEE;
+	margin-top: 50px;
+	margin-bottom: -50px;
+	text-align: center;
 }
 
 button {
