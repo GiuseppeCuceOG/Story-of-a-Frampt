@@ -18,15 +18,19 @@ var main = function() {
 		
 		$('#left').click(function() {
 			$('#sceltaCibo').fadeIn(5000, function() {
-				$(this).after('<p>Deer or Mushrooms?</p>');
+				$('#right').remove();
 			});
 		});
 
 		$('#right').click(function() {
 			$('#bear').fadeIn(5000, function() {
-				$(this).after('<p>Bacche?</p>')
-			})
+				$('#left').remove();
+				$('#bacca').click(function() {
+					$('#Trex').fadeIn(5000);
+				});
+			});
 		});
+
 }
 
 $(document).ready(main);

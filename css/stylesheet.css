@@ -34,6 +34,12 @@ div img {
 	height: 200px;
 }
 
+#Trex {
+	display: none;
+	width: 500px;
+	height: 200px;
+}
+
 p {
 	color: #EEE;
 	text-align: center;
