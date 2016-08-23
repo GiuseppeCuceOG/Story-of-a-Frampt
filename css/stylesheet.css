@@ -28,6 +28,18 @@ div img {
 	display: none;
 }
 
+#bear {
+	display: none;
+	width: 500px;
+	height: 200px;
+}
+
+p {
+	color: #EEE;
+	text-align: center;
+	font-size: 25px;
+}
+
 #right, #mushrooms {
 	float: right;
 }

@@ -17,7 +17,15 @@ var Bear = {
 var main = function() {
 		
 		$('#left').click(function() {
-			$('#sceltaCibo').css('display','inline-block');
+			$('#sceltaCibo').fadeIn(5000, function() {
+				$(this).after('<p>Deer or Mushrooms?</p>');
+			});
+		});
+
+		$('#right').click(function() {
+			$('#bear').fadeIn(5000, function() {
+				$(this).after('<p>Bacche?</p>')
+			})
 		});
 }
 
