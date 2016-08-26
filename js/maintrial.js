@@ -27,6 +27,7 @@ var main = function() {
 				$('#left').remove();
 				$('#bacca').click(function() {
 					$('#Trex').fadeIn(5000);
+					return false;
 				});
 			});
 		});
