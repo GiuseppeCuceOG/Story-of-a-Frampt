@@ -1,5 +1,5 @@
 body {
-	background-color: #422333;
+	background-color: #425333;
 }
 
 h1 {
@@ -10,35 +10,35 @@ h1 {
 div {
 	width: 500px;
 	height: 200px;
-	background-color: #768E23;
+	background-color: rgba(255,255,255,0.3);
 	margin: 0 auto;
 	margin-top: 80px;
+	border-radius: 10px;
+}
+
+#VeganWay {
+	width: 800px;
+	height: 405px;
+	margin-bottom: 40px;
+	display: none;
+}
+
+#parametri {
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	margin-left: 40px;
+	margin-top: -40px;
 }
 
 div img {
 	height: 200px;
 	width: 200px;
 	display: inline-block;
+	border-radius: 10px;
 }
 
-#sceltaCibo {
-	margin-bottom: 100px;
-	width: 500px;
-	height: 200px;
-	display: none;
-}
 
-#bear {
-	display: none;
-	width: 500px;
-	height: 200px;
-}
-
-#Trex {
-	display: none;
-	width: 500px;
-	height: 200px;
-}
 
 p {
 	color: #EEE;
@@ -46,8 +46,20 @@ p {
 	font-size: 25px;
 }
 
-#right, #mushrooms {
+#sceltaciboP, #sceltaciboB, #sceltacibo3, #Cervovivo {
+	display: none;
+}
+
+#orso, #mushrooms, #fragole, #vegetables {
 	float: right;
+}
+
+#goat {
+	margin-left: 100px;
+}
+
+#Cervovivo #cervo {
+	margin-left: 150px;
 }
 
 div p {
@@ -58,19 +70,11 @@ div p {
 form {
 	text-align: center;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 form input {
 	width: 250px;
-}
-
-h3 {
-	color: #EEE;
-	text-align: center;
-}
-
-h3 p {
-	margin-top: 10px;
 }
 
 h4 {
