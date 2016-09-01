@@ -58,14 +58,41 @@ var main = function() {
 						}
 						return false;
 					});
+					return false;
 				});
 				$('#mushrooms').click(function() {
 					Panther.health = Panther.health + 10;
 					Panther.energy = Panther.energy + 10;
 					console.log(Panther);
 					$('#deer').fadeOut(1000);
-					$('#VeganWay').fadeIn(1500);
-
+					$('#VeganWay').fadeIn(1000);
+					$('.roma').fadeIn(1500, function() {
+						$('#deerAlive').click(function() {
+							Panther.health = Panther.health - 4;
+							Panther.energy = Panther.energy - 3;
+							$('#goat, #vegetables').fadeOut(1000);
+							$('#risposte').append('<p>That was not a nice choice since mushrooms did not give you attack skills, Panther is terribly weak</p>');
+							console.log(Panther);
+							return false;
+						});
+						$('#goat').click(function() {
+							Panther.health = Panther.health + 8;
+							Panther.energy = Panther.energy + 7;
+							Panther.attack = Panther.attack + 2;
+							$('#deerAlive, #vegetables').fadeOut(1000);
+							$('#risposte').append('<p>Wise choice! Why risking to catch an alive prey when you can get a ready one? Panther is getting better</p>');
+							console.log(Panther);
+							return false;
+						});
+						$('#vegetables').click(function() {
+							Panther.health = Panther.health + 14;
+							Panther.energy = Panther.energy + 11;
+							$('#deerAlive, #goat').fadeOut(1000);
+							$('#risposte').append('<p>Seems Panther forgot its instinct a bit, Panther is also getting fatter but it looks like quite happy</p>');
+							console.log(Panther);
+							return false;
+						});
+					});
 					return false;
 				});
 			});
