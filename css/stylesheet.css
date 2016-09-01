@@ -1,10 +1,24 @@
 body {
-	background-color: #425333;
+	background-color: #66584F;
 }
 
 h1 {
 	color: #EEEEEE;
 	text-align: center;
+}
+
+#parametri {
+	position: fixed;
+	width: 150px;
+	height: 150px;
+	margin-left: 40px;
+	margin-top: -40px;
+}
+
+#parametri p {
+	margin: 0 auto;
+	margin-top: 5px;
+	font-size: 20px;
 }
 
 div {
@@ -34,16 +48,6 @@ div {
 	text-align: center;
 }
 
-
-
-#parametri {
-	position: fixed;
-	width: 150px;
-	height: 150px;
-	margin-left: 40px;
-	margin-top: -40px;
-}
-
 div img {
 	height: 200px;
 	width: 200px;
@@ -51,15 +55,13 @@ div img {
 	border-radius: 10px;
 }
 
-
-
 p {
 	color: #EEE;
 	text-align: center;
 	font-size: 25px;
 }
 
-#sceltaciboP, #sceltaciboB, #sceltacibo3, #Cervovivo, .roma {
+#sceltaciboP, #sceltaciboB, #sceltacibo3, #Cervovivo, .roma, #risposte {
 	display: none;
 }
 
