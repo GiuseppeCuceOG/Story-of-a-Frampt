@@ -7,79 +7,85 @@ h1 {
 	text-align: center;
 }
 
-#parametri {
-	position: fixed;
-	width: 150px;
-	height: 150px;
-	margin-left: 40px;
-	margin-top: -40px;
+h4 {
+	color: #EEE;
+	margin-top: 50px;
+	margin-bottom: -50px;
+	text-align: center;
 }
 
-#parametri p {
+#parametri {
+	background-color: rgba(225,255,255,0.0);
+	position: fixed;
+	width: 550px;
+	height: 140px;
+	margin-left: 40px;
+	margin-top: -40px;
+	box-shadow: none;
+}
+
+#parametri ol {
+	list-style-type: none;
+	margin-left: -15px;
+}
+
+#parametri li {
 	margin: 0 auto;
 	margin-top: 5px;
 	font-size: 20px;
+	color: #DDA;
 }
 
 div {
-	width: 500px;
-	height: 200px;
-	background-color: rgba(225,255,255,0.1);
+	width: 580px;
+	height: 250px;
+	background-color: rgba(180,255,255,0.0);
 	margin: 0 auto;
 	margin-top: 80px;
+	margin-bottom: 150px;
 	border-radius: 10px;
-}
-
-#VeganWay {
-	width: 800px;
-	height: 205px;
-	margin-bottom: 40px;
-	display: none;
-}
-
-.roma {
-	width: 800px;
-	height: 400px;
-}
-
-.col-md-4 {
-	width: 266px;
-	height: 200px;
-	text-align: center;
 }
 
 div img {
-	height: 200px;
-	width: 200px;
+	height: 250px;
+	width: 250px;
 	display: inline-block;
-	border-radius: 10px;
-}
-
-p {
-	color: #EEE;
-	text-align: center;
-	font-size: 25px;
-}
-
-#sceltaciboP, #sceltaciboB, #sceltacibo3, #Cervovivo, .roma, #risposte {
-	display: none;
-}
-
-#orso, #mushrooms, #fragole {
-	float: right;
-}
-
-#goat {
-	/*margin-left: 100px;*/
-}
-
-#Cervovivo #cervo {
-	margin-left: 150px;
+	border-radius: 125px;
+	box-shadow: 0px 0px 40px 7px #301010;
 }
 
 div p {
 	text-align: center;
 	color: #500;
+}
+
+p {
+	color: #EEE;
+	text-align: center;
+	font-size: 18px;
+}
+
+#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated {
+	display: none;
+}
+
+#plusvalori {
+	display: inline-block;
+}
+
+#plusvalori div ul {
+	display: inline-block;
+	list-style-type: none;
+
+}
+
+#Cervovivo {
+	height: 520px;
+}
+
+#Cervovivo #cervo {
+	margin-left: 165px;
+	margin-bottom: 20px;
 }
 
 form {
@@ -92,14 +98,41 @@ form input {
 	width: 250px;
 }
 
-h4 {
-	color: #EEE;
-	margin-top: 50px;
-	margin-bottom: -50px;
-	text-align: center;
-}
-
 button {
 	text-align: center;
 	margin-top: 20px;
+}
+
+#VeganWay {
+	width: 800px;
+	height: 205px;
+	margin-bottom: 40px;
+	display: none;
+}
+
+.roma {
+	width: 900px;
+	height: 300px;
+}
+
+.col-md-4 {
+	width: 300px;
+	height: 200px;
+	text-align: center;
+}
+
+#risposte {
+	height: 100px;
+}
+
+#animalupdated img {
+	margin-left: 175px;
+}
+
+#orso, #mushrooms {
+	float: right;
+}
+
+#goat {
+
 }
