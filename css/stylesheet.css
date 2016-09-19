@@ -1,8 +1,15 @@
 body {
-	background-color: #66584F;
+	background-color: #62485D;
 }
 
-h1 {
+#languages {
+
+	margin-left: 10px;
+	color: #EEE;
+	font-size: 12px;
+}
+
+h2 {
 	color: #EEEEEE;
 	text-align: center;
 }
@@ -39,7 +46,7 @@ h4 {
 div {
 	width: 580px;
 	height: 250px;
-	background-color: rgba(180,255,255,0.0);
+	background-color: rgba(180,255,255,0.2);
 	margin: 0 auto;
 	margin-top: 80px;
 	margin-bottom: 150px;
@@ -65,22 +72,32 @@ p {
 	font-size: 18px;
 }
 
-#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated {
+#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated, #vg, #parte2 h6, #cleverpath, .cibo1 {
 	display: none;
 }
 
-#plusvalori {
-	display: inline-block;
+#sceltaciboP {
+	margin-bottom: 50px;
+	height: 500px;
 }
 
-#plusvalori div ul {
-	display: inline-block;
-	list-style-type: none;
+span a #deer, span a #mushrooms {
+	margin-bottom: 15px;
+}
 
+.col-md-6 {
+	height: 380px;
+}
+
+.col-md-6 ol {
+	text-align: center;
+	list-style-type: none;
+	color: #EEE;
+	display: none;
 }
 
 #Cervovivo {
-	height: 520px;
+	height: 550px;
 }
 
 #Cervovivo #cervo {
@@ -106,19 +123,26 @@ button {
 #VeganWay {
 	width: 800px;
 	height: 205px;
+	margin-top: 120px;
 	margin-bottom: 40px;
 	display: none;
 }
 
 .roma {
 	width: 900px;
-	height: 300px;
+	height: 450px;
 }
 
 .col-md-4 {
 	width: 300px;
-	height: 200px;
+	height: 350px;
 	text-align: center;
+}
+
+#vg {
+	color: #EEE;
+	list-style-type: none;
+	margin-top: 15px;
 }
 
 #risposte {
@@ -133,6 +157,27 @@ button {
 	float: right;
 }
 
-#goat {
+#parte2 {
+	text-align: center;
+	height: 800px;
+}
 
+#parte2 h3 {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	color: #DDD;
+}
+
+#parte2 img {
+	margin-bottom: 50px;
+}
+
+#parte2 h6 {
+	margin-bottom: 30px;
+	color: #EEE;
+	font-size: 20px;
+}
+
+#rf2 {
+	float: right;
 }

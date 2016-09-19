@@ -13,12 +13,47 @@ var Bear = {
 	attack: 0
 };
 
-var main = function() {
+var Abilita = 0;
 
+var Main = function() {
+		// Panther is clicked and user is asked the name of it
 		$('#pantera').click(function() {
 			document.getElementById("name").innerHTML = Panther.name= prompt("What is the name?");
-			$('#orso').fadeOut(1000);
+			$('#orso').toggle("disable");
 			$('#intro').fadeIn(900);
+
+			//toggling health energy attack
+			$('#deer').mouseenter(function() {
+				$('.ifDeer ol').toggle();
+			}).mouseleave(function() {
+				$('.ifDeer ol').toggle();
+			});
+
+			$('#mushrooms').mouseenter(function() {
+				$('.ifMush ol').toggle();
+			}).mouseleave(function() {
+				$('.ifMush ol').toggle();
+			});
+
+			$('#deerAlive').mouseenter(function() {
+				$('.ifDeeer ol').toggle();
+			}).mouseleave(function() {
+				$('.ifDeeer ol').toggle();
+			});
+
+			$('#goat').mouseenter(function() {
+				$('.ifGoat ol').toggle();
+			}).mouseleave(function() {
+				$('.ifGoat ol').toggle();
+			});
+
+			$('#vegetables').mouseenter(function() {
+				$('.ifVege ol').toggle();
+			}).mouseleave(function() {
+				$('.ifVege ol').toggle();
+			});
+
+			//food's choice deer or mushrooms
 			$('#sceltaciboP').fadeIn(1000, function() {
 				$('#deer').click(function() {
 					Panther.health = Panther.health + 10;
@@ -28,15 +63,15 @@ var main = function() {
 					document.getElementById("energy").innerHTML = Panther.energy;
 					document.getElementById("attack").innerHTML = Panther.attack;
 					console.log(Panther);
-					$('#mushrooms').fadeOut(1000);
+					$('.ifMush').fadeOut(1000);
 					$('#Cervovivo').fadeIn(1000);
-					$('form').submit(function() {
+					$('#richiestegioco').submit(function() {
 						
 						var choice = $('#userchoice').val().toUpperCase();
 						
 						if(choice === 'DIRECT') {
 							var escapeDeer = Math.random()*9; //capability for deer to escape
-							if(Panther.attack > escapeDeer) { //got the prey
+							if(Panther.attack > escapeDeer) { //if it gets the prey
 								Panther.health = Panther.health + 20;
 								Panther.energy = Panther.energy + 10;
 								Panther.attack = Panther.attack + 2;
@@ -45,7 +80,7 @@ var main = function() {
 								document.getElementById("attack").innerHTML = Panther.attack;
 								$('#risposte').append("<p>Prey Caught! Panther is getting stronger! Well made!</p>");
 								$('#risposte').fadeIn(1000);
-								$('form').fadeOut(800);
+								$('#richiestegioco').fadeOut(800);
 								$('#Cervovivo').css("height","400px");
 								$('#animalupdated').fadeIn(800);
 								$('#animalupdated').append("<img src='strongpa.jpg'/>");
@@ -59,7 +94,7 @@ var main = function() {
 								document.getElementById("attack").innerHTML = Panther.attack;
 								$('#risposte').append("<p>Panther missed the prey and lost energy, Panther is weak!</p>");
 								$('#risposte').fadeIn(1000);
-								$('form').fadeOut(800);
+								$('#richiestegioco').fadeOut(800);
 								$('#Cervovivo').css("height","480px");
 								$('#animalupdated').fadeIn(800);
 								$('#animalupdated').append("<img src='weakpanther.jpg'/>");
@@ -72,12 +107,83 @@ var main = function() {
 							document.getElementById("health").innerHTML = Panther.health;
 							document.getElementById("energy").innerHTML = Panther.energy;
 							document.getElementById("attack").innerHTML = Panther.attack;
-							$('#risposte').append("<p>Yes! clever choice, Panther is still the best in this, prey got! nice job</p>");
+							$('#risposte').append("<p>Yes! clever choice, Panther is still the best in this, prey got! nice job </p>");
 							$('#risposte').fadeIn(1000);
-							$('form').fadeOut(800);
+							$('#richiestegioco').fadeOut(800);
 							$('#Cervovivo').css("height","480px");
 							$('#animalupdated').fadeIn(800);
 							$('#animalupdated').append("<img src='cleverpanther.jpg'/>");
+
+							$('#parte2').prepend("<img src='byground.jpg'/>");
+							$('#parte2').prepend("<p>What do you choose, going through BRANCHES trees or going by GROUND?</p>");
+							$('#parte2').prepend("<p>While walking," + " " + Panther.name + " " + "encountered several obstacles, or choices maybe, the path seems to split in two, by ground looks like an affordable ravine but it will take very longer time, in the other hand we have a shortcut through branches trees</p>");
+							$('#parte2').prepend("<p>By regaining strengths," + " " + Panther.name + " " + "reestablished his senses and he smelled something that reminded him a deep and not clear thing, maybe related to his passed weak condition, he decided to follow it</p>");
+							
+							$('#cleverpath').toggle(function() {
+								$(this).submit(function() {
+
+									$(this).toggle(1200);
+									var choiceTwo = $('#userchoice2').val().toUpperCase();
+
+									if(choiceTwo === "BRANCHES") {
+										Abilita = Abilita + 1;
+										Panther.energy = Panther.energy - 5;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										console.log(Abilita);
+										$('#parte2').append("<p>Then he climbed branches and got an ability, he can now climb on trees, and he discovered a plenty various of new food, let's eat some</p>");
+										return false;
+
+									}
+									else if(choiceTwo === "GROUND") {
+										Panther.energy = Panther.energy - 2;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										$('#parte2').append("<p>No matter those branches were not that steady after all and he did not spend useful energy for a risky thing, the journey goes on, but first let's eat some food in the nearby</p>");
+										return false;
+									}
+								});
+								$('.cibo1').fadeIn('fast');
+								var randomFood = Math.floor(Math.random()*4);
+								var randomFoodTwo = Math.floor(Math.random()*4);
+								switch(randomFood) {
+									case 0:
+										$('.cibo1').append("<img src='ananas.jpg'/>");
+										break;
+									case 1:
+										$('.cibo1').append("<img src='arancia.png'/>");
+										break;
+									case 2:
+										$('.cibo1').append("<img src='pesca.jpg'/>");
+										break;
+									case 3:
+										$('.cibo1').append("<img src='lemon.png'/>");
+										break;
+									case 4:
+										$('.cibo1').append("<img src='fragole.jpg'/>");
+									default:
+										console.log("I am not supposed to appear in game");
+								}
+
+								switch(randomFoodTwo) {
+									case 0:
+										$('.cibo1').append("<img id='rf2' src='ananas.jpg'/>");
+										break;
+									case 1:
+										$('.cibo1').append("<img id='rf2' src='arancia.png'/>");
+										break;
+									case 2:
+										$('.cibo1').append("<img id='rf2' src='pesca.jpg'/>");
+										break;
+									case 3:
+										$('.cibo1').append("<img id='rf2' src='lemon.png'/>");
+										break;
+									case 4:
+										$('.cibo1').append("<img id='rf2' src='fragole.jpg'/>");
+									default:
+										console.log("I am not supposed to appear in game");
+								}
+							});
+				
+							//continua qui
 						}
 						return false;
 					});
@@ -88,7 +194,7 @@ var main = function() {
 					Panther.energy = Panther.energy + 10;
 					document.getElementById("health").innerHTML = Panther.health;
 					document.getElementById("energy").innerHTML = Panther.energy;
-					$('#deer').fadeOut(1000);
+					$('.ifDeer').fadeOut(1000);
 					$('#VeganWay').fadeIn(1000);
 					$('.roma').fadeIn(1500, function() {
 						$('#deerAlive').click(function() {
@@ -129,6 +235,12 @@ var main = function() {
 							$('#animalupdated').fadeIn(800);
 							$('#animalupdated').append("<img src='fatpanther.jpg'/>");
 							console.log(Panther);
+							$('#parte2').prepend("<img src='Mogiogoro.jpg'/>");
+							$('#parte2').prepend("<h3>Its name is Mogiogoro</h3>");
+							$('#parte2').prepend("<p>So he went, and he met this individual and singular animal, it was a very ancient frog</p>");
+							$('#parte2').prepend("<p>One day the species in the forest suggested him to meet a very singular one, respected by other and wise and old as much as the nature is</p>");
+							$('#parte2').prepend("<p>The panther has eaten very much, meanwhile the time runs (and while he eats) he starts to be friendly with the other animal in the area, he is not a predator anymore, he could also understand the languages of the other species and he is now able a bit to sense the nature's whisperings</p>");
+							$('#parte2 h6').fadeIn(12000);
 							return false;
 						});
 					});
@@ -138,4 +250,4 @@ var main = function() {
 		});
 }
 
-$(document).ready(main);
+$(document).ready(Main);
