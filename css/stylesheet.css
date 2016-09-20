@@ -1,5 +1,5 @@
 body {
-	background-color: #62485D;
+	background-color: #623843;
 }
 
 #languages {
@@ -46,7 +46,7 @@ h4 {
 div {
 	width: 580px;
 	height: 250px;
-	background-color: rgba(180,255,255,0.2);
+	background-color: rgba(215,130,80,0.2);
 	margin: 0 auto;
 	margin-top: 80px;
 	margin-bottom: 150px;
@@ -72,7 +72,7 @@ p {
 	font-size: 18px;
 }
 
-#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated, #vg, #parte2 h6, #cleverpath, .cibo1 {
+#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated, #vg, #parte2 h6, #cleverpath, #parte2, .cibo1, #parte3 {
 	display: none;
 }
 
@@ -157,9 +157,13 @@ button {
 	float: right;
 }
 
-#parte2 {
+#parte2 , #parte3 {
 	text-align: center;
-	height: 800px;
+	height: 850px;
+}
+
+#parte3 ol {
+	list-style-type: none;
 }
 
 #parte2 h3 {
@@ -170,6 +174,10 @@ button {
 
 #parte2 img {
 	margin-bottom: 50px;
+}
+
+#parte3 img {
+	margin: 15px 15px 15px 15px;
 }
 
 #parte2 h6 {
