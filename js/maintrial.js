@@ -279,27 +279,207 @@ var Main = function() {
 							$('.cibo1').click(function() {
 								$('#parte3').fadeIn('slow');
 								$('#climb').click(function() {
-									$('#run').fadeOut('slow');
-									$('#parte3').append("<p></p>");
-									Panther.energy = Panther.energy - 5;
-									document.getElementById("energy").innerHTML = Panther.energy;
-									return false;
+									if(Abilita === 1) {
+										$('#run').fadeOut('slow');
+										var carica = 8 * Math.random();
+										var albero = (Math.random() * 90) + (Math.random() * 18) + (Math.random() * 5);
+										console.log(carica,albero)
+										if(carica < albero) {
+											// rhino impacting animation
+											$('#parte4').append("<img id='tronco' src='albero.jpg'/>").fadeIn('fast');
+											$('.rhinoCarica').fadeIn(2000).animate({right:'+=300px'},4000, function() {
+												$('#tronco').effect('bounce',{times:3},1500);
+											}); 
+											
+											$('#parte5').prepend("<p>WOOOW! Rhino impacted with the tree, that was strong! \
+												thankfully the tree was tough enough and" + " " + Panther.name + " " + " could stay safe on branches</p>").fadeIn('fast');
+											$('#parte6').toggle();
+										}
+										else if(carica > albero) {
+
+											$('#parte4').append("<img id='tronco' src='albero.jpg'/>").fadeIn('fast');
+											$('#tronco').css("float","left");
+											$('.rhinoCarica').fadeIn(2000).animate({right:'+=300px'},4000, function() {
+												$('#tronco').effect('bounce',{times:3},1500);
+											});
+
+											$('#parte5').prepend("<img src='weakpanther.jpg'/>","<p>WOW!! the impact has been terribly strong, the Panther has fallen from a deadly highness, panther passed away..</p>").css("text-align","center").fadeIn('fast');
+											$('#parte5 img').css("margin-top","20px");
+											Panther.health = Panther.health - Panther.health;
+											Panther.energy = Panther.energy - Panther.energy;
+											Panther.attack = Panther.attack - Panther.attack;
+											document.getElementById("health").innerHTML = Panther.health;
+											document.getElementById("energy").innerHTML = Panther.energy;
+											document.getElementById("attack").innerHTML = Panther.attack;
+											return false;
+										}
+									
+										Panther.energy = Panther.energy - 5;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										return false;
+									}
+									else {
+										$('#parte4').append("<img id='pp' src='weakpanther.jpg'/>").fadeIn('fast');
+											$('#tronco').css("float","left");
+											$('.rhinoCarica').fadeIn(2000).animate({right:'+=300px'},4000, function() {
+												$('#pp').effect('bounce',{times:3},1500);
+											});
+										$('#parte4').append("<p>You have no skills about that, the Mum Rhino got you!! panther is dead</p>");
+										Panther.health = Panther.health - Panther.health;
+										Panther.energy = Panther.energy - Panther.energy;
+										Panther.attack = Panther.attack - Panther.attack;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+										return false;
+									}
 								});
 								$('#run').click(function() {
+									Panther.energy = Panther.energy - 15;
+									document.getElementById("energy").innerHTML = Panther.energy;
 									$('#climb').fadeOut('slow');
-									$('#parte3').append("<p>An incredible feline sprint" + " " + Panther.name + " " + "did! running an incredible speed he reach a strange place complitely different from the left one, \
+
+									$('#parte5, #parte6').toggle(1000);
+									$('#parte5').prepend("<p>An incredible feline sprint" + " " + Panther.name + " " + "did! running an incredible speed he reach a strange place completely different from the left one, \
 										the atmosphere and the air is strange here, and not friendly at all, the breath was getting heavier not just for the running, the heartbeat increase, it something hardly manageable, \
 										you do better run like before if you are not interested in the effect of it, but remember that skills required a lot of energy</p>");
 									Abilita = Abilita + 1; //abilita della corsa super veloce
 									console.log(Abilita);
-									Panther.energy = Panther.energy - 15;
-									document.getElementById("energy").innerHTML = Panther.energy;
 									return false;
 								});
-
-
 							});
-						}
+
+							//quarta parte
+							var randomFoodThree = Math.floor(Math.random()*4);
+							var randomFoodFour = Math.floor(Math.random()*4);
+							switch(randomFoodThree) {
+								case 0:
+									$('.cibo2').append("<a><img id='rf3' src='ananas.jpg'/></a>");
+									$('#rf3').click(function() {
+										$('#rf4').fadeOut(1200);
+										Panther.health = Panther.health + 8;
+										Panther.energy = Panther.energy + 10;
+										Panther.attack = Panther.attack + 1;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 1:
+									$('.cibo2').append("<a><img id='rf3' src='arancia.png'/></a>");
+									$('#rf3').click(function() {
+										$('#rf4').fadeOut(1200);
+										Panther.health = Panther.health + 7;
+										Panther.energy = Panther.energy + 12;
+										Panther.attack = Panther.attack + 0;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 2:
+									$('.cibo2').append("<a><img id='rf3' src='pesca.jpg'/></a>");
+									$('#rf3').click(function() {
+										$('#rf4').fadeOut(1200);
+										Panther.health = Panther.health + 6;
+										Panther.energy = Panther.energy + 9;
+										Panther.attack = Panther.attack + 2;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 3:
+									$('.cibo2').append("<a><img id='rf3' src='lemon.png'/></a>");
+									$('#rf3').click(function() {
+										$('#rf4').fadeOut(1200);
+										Panther.health = Panther.health + 8;
+										Panther.energy = Panther.energy + 11;
+										Panther.attack = Panther.attack + 1;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 4:
+									$('.cibo2').append("<a><img id='rf3' src='fragole.jpg'/></a>");
+									$('#rf3').click(function() {
+										$('#rf4').fadeOut(1200);
+										Panther.health = Panther.health + 15;
+										Panther.energy = Panther.energy + 20;
+										Panther.attack = Panther.attack + 3;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+								default:
+									console.log("I am not supposed to appear in game");
+							}
+
+							switch(randomFoodFour) {
+								case 0:
+									$('.cibo2').append("<a><img id='rf4' src='ananas.jpg'/></a>");
+									$('#rf4').click(function() {
+										$('#rf3').fadeOut(1200);
+										Panther.health = Panther.health + 8;
+										Panther.energy = Panther.energy + 10;
+										Panther.attack = Panther.attack + 1;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 1:
+									$('.cibo2').append("<a><img id='rf4' src='arancia.png'/></a>");
+									$('#rf4').click(function() {
+										$('#rf3').fadeOut(1200);
+										Panther.health = Panther.health + 7;
+										Panther.energy = Panther.energy + 12;
+										Panther.attack = Panther.attack + 0;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 2:
+									$('.cibo2').append("<a><img id='rf4' src='pesca.jpg'/></a>");
+									$('#rf4').click(function() {
+										$('#rf3').fadeOut(1200);
+										Panther.health = Panther.health + 6;
+										Panther.energy = Panther.energy + 9;
+										Panther.attack = Panther.attack + 2;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 3:
+									$('.cibo2').append("<a><img id='rf4' src='lemon.png'/></a>");
+									$('#rf4').click(function() {
+										$('#rf3').fadeOut(1200);
+										Panther.health = Panther.health + 8;
+										Panther.energy = Panther.energy + 11;
+										Panther.attack = Panther.attack + 1;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+									break;
+								case 4:
+									$('.cibo2').append("<a><img id='rf4' src='fragole.jpg'/></a>");
+									$('#rf4').click(function() {
+										$('#rf3').fadeOut(1200);
+										Panther.health = Panther.health + 15;
+										Panther.energy = Panther.energy + 20;
+										Panther.attack = Panther.attack + 3;
+										document.getElementById("health").innerHTML = Panther.health;
+										document.getElementById("energy").innerHTML = Panther.energy;
+										document.getElementById("attack").innerHTML = Panther.attack;
+									});
+								default:
+									console.log("I am not supposed to appear in game");
+							}
+						}	
 						return false;
 					});
 					return false;

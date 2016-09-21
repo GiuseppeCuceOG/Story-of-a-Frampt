@@ -1,5 +1,5 @@
 body {
-	background-color: #623843;
+	background-color: #F2A843;
 }
 
 #languages {
@@ -159,7 +159,7 @@ button {
 
 #parte2 , #parte3 {
 	text-align: center;
-	height: 850px;
+	height: 1050px;
 }
 
 #parte3 ol {
@@ -186,6 +186,31 @@ button {
 	font-size: 20px;
 }
 
-#rf2 {
+#rf2 , #rf4{
 	float: right;
+}
+
+#parte4 {
+	width: 680px;
+	height: 300px;
+	display: none;
+}
+
+#parte4 p {
+	margin-top: 50px;
+}
+
+.rhinoCarica {
+	display: none;
+	float: right;
+	position: relative;
+}
+
+#parte5 {
+	display: none;
+	height: 150px;
+}
+
+#parte6 {
+	display: none;
 }
