@@ -2,6 +2,14 @@ body {
 	background-color: #F2A843;
 }
 
+.STAY {
+	background-color: #9C5300;
+}
+
+.RED {
+	color: #E33;
+}
+
 #languages {
 
 	margin-left: 10px;
@@ -72,7 +80,7 @@ p {
 	font-size: 18px;
 }
 
-#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated, #vg, #parte2 h6, #cleverpath, #parte2, .cibo1, #parte3 {
+#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated, #vg, #parte2 h6, #cleverpath, #parte2, .cibo1, #parte3 , #parte5, #parte6, #parte7 , #parte8 {
 	display: none;
 }
 
@@ -207,10 +215,23 @@ button {
 }
 
 #parte5 {
-	display: none;
-	height: 150px;
+	width: 680px;
+	height: 450px;
 }
 
-#parte6 {
-	display: none;
+#parte5 p {
+	margin-top: 20px;
+}
+
+#pantherrunning {
+	position: relative;
+}
+
+#parte7 {
+	text-align: center;
+	height: 580px;
+}
+
+#parte7 p , #parte7 img {
+	margin-top: 20px;
 }

@@ -279,9 +279,12 @@ var Main = function() {
 							$('.cibo1').click(function() {
 								$('#parte3').fadeIn('slow');
 								$('#climb').click(function() {
+
+									$('#run').fadeOut('slow');
+
 									if(Abilita === 1) {
-										$('#run').fadeOut('slow');
-										var carica = 8 * Math.random();
+										
+										var carica = 58 * Math.random();
 										var albero = (Math.random() * 90) + (Math.random() * 18) + (Math.random() * 5);
 										console.log(carica,albero)
 										if(carica < albero) {
@@ -292,7 +295,7 @@ var Main = function() {
 											}); 
 											
 											$('#parte5').prepend("<p>WOOOW! Rhino impacted with the tree, that was strong! \
-												thankfully the tree was tough enough and" + " " + Panther.name + " " + " could stay safe on branches</p>").fadeIn('fast');
+												thankfully the tree was tough enough and" + " " + Panther.name + " " + " could stay safe on branches and carry on with no dangerous for a while</p>").fadeIn('fast');
 											$('#parte6').toggle();
 										}
 										else if(carica > albero) {
@@ -303,8 +306,9 @@ var Main = function() {
 												$('#tronco').effect('bounce',{times:3},1500);
 											});
 
-											$('#parte5').prepend("<img src='weakpanther.jpg'/>","<p>WOW!! the impact has been terribly strong, the Panther has fallen from a deadly highness, panther passed away..</p>").css("text-align","center").fadeIn('fast');
-											$('#parte5 img').css("margin-top","20px");
+											$('#parte5').prepend("<img src='weakpanther.jpg'/>","<p>WOW!! the impact has been terribly strong, the Panther has fallen from a deadly height, panther passed away..</p>").css("text-align","center").fadeIn('fast');
+											$('#parte5 img').css("margin-top","20px","margin-bottom","20px");
+											$('#parte5 #introPart5').css("display","none");
 											Panther.health = Panther.health - Panther.health;
 											Panther.energy = Panther.energy - Panther.energy;
 											Panther.attack = Panther.attack - Panther.attack;
@@ -319,6 +323,7 @@ var Main = function() {
 										return false;
 									}
 									else {
+										
 										$('#parte4').append("<img id='pp' src='weakpanther.jpg'/>").fadeIn('fast');
 											$('#tronco').css("float","left");
 											$('.rhinoCarica').fadeIn(2000).animate({right:'+=300px'},4000, function() {
@@ -340,9 +345,8 @@ var Main = function() {
 									$('#climb').fadeOut('slow');
 
 									$('#parte5, #parte6').toggle(1000);
-									$('#parte5').prepend("<p>An incredible feline sprint" + " " + Panther.name + " " + "did! running an incredible speed he reach a strange place completely different from the left one, \
-										the atmosphere and the air is strange here, and not friendly at all, the breath was getting heavier not just for the running, the heartbeat increase, it something hardly manageable, \
-										you do better run like before if you are not interested in the effect of it, but remember that skills required a lot of energy</p>");
+									$('#parte5').prepend("<p>An incredible feline sprint" + " " + Panther.name + " " + "taken! successfully escaping from the Rhino</p>");
+					
 									Abilita = Abilita + 1; //abilita della corsa super veloce
 									console.log(Abilita);
 									return false;
@@ -478,7 +482,37 @@ var Main = function() {
 									});
 								default:
 									console.log("I am not supposed to appear in game");
-							}
+							}//continua qui la quarta parte
+
+							$('.cibo2').click(function() {
+								$('#parte7').fadeIn(4000);
+							});
+
+							$('#ostile').submit(function() {
+								$(this).toggle('slow');
+								var choiceThree = $('#userchoice3').val().toUpperCase();
+								if(choiceThree === "RUN") {
+									//do something
+									$('#parte8').toggle();
+									Panther.energy = Panther.energy - 15;
+									document.getElementById("energy").innerHTML = Panther.energy;
+									return false;
+								}
+								else if(choiceThree === "STAY") {
+									//do something
+									$('#parte8').toggle();
+									$('body').toggleClass("STAY",4000);
+									$('#health').toggleClass("RED");
+									Abilita = Abilita + 1; //portatore di virus
+									var decrease = setInterval(function() {
+										document.getElementById("health").innerHTML = (Panther.health = Panther.health - 1);
+									},300);
+									
+									return false;
+								}
+
+							//ultima parte prima dell incontro con l'Orso
+							});	
 						}	
 						return false;
 					});
