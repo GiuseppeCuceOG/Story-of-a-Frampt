@@ -490,10 +490,12 @@ var Main = function() {
 
 							$('#ostile').submit(function() {
 								$(this).toggle('slow');
+								$('.cibo3, .cibo4, .cibo5').toggle();
 								var choiceThree = $('#userchoice3').val().toUpperCase();
 								if(choiceThree === "RUN") {
 									//do something
-									$('#parte8').toggle();
+									$('#parte8, #parte9').toggle();
+									$('#parte8').append("<p>and He ran again very fast until he got out from that zone, and now you are seriously tired</p>");
 									Panther.energy = Panther.energy - 15;
 									document.getElementById("energy").innerHTML = Panther.energy;
 									return false;
@@ -501,17 +503,328 @@ var Main = function() {
 								else if(choiceThree === "STAY") {
 									//do something
 									$('#parte8').toggle();
-									$('body').toggleClass("STAY",4000);
+									$('#parte8').append("<p>It seems you got a virus! your health is decreasing constantly, he needs to survival, try to find something, hurry! </p>");
+									$('body').toggleClass("STAY",3000);
 									$('#health').toggleClass("RED");
+									switch(randomFoodFour) {
+										case 0:
+											$('.cibo3').append("<a><img id='rf5' src='rambutan.jpg'/></a>");
+											$('#rf5').click(function() {
+												$('#rf6').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy - 2;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf7' src='weirdone.jpg'/></a>");
+											$('#rf7').click(function() {
+												$('#rf8').fadeOut(1200);
+												Panther.health = Panther.health + 17;
+												Panther.energy = Panther.energy + 1;
+												Panther.attack = Panther.attack - 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf9' src='African-Cucumber.jpg'/></a>");
+											$('#rf9').click(function() {
+												$('#rf10').fadeOut(1200);
+												Panther.health = Panther.health + 10;
+												Panther.energy = Panther.energy - 8;
+												Panther.attack = Panther.attack + 0;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 1:
+											$('.cibo3').append("<a><img id='rf5' src='weirdone.jpg'/></a>");
+											$('#rf5').click(function() {
+												$('#rf6').fadeOut(1200);
+												Panther.health = Panther.health + 17;
+												Panther.energy = Panther.energy + 1;
+												Panther.attack = Panther.attack - 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf7' src='African-cucumber.jpg'/></a>");
+											$('#rf7').click(function() {
+												$('#rf8').fadeOut(1200);
+												Panther.health = Panther.health + 10;
+												Panther.energy = Panther.energy - 8;
+												Panther.attack = Panther.attack + 0;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf9' src='Durian.jpg'/></a>");
+											$('#rf9').click(function() {
+												$('#rf10').fadeOut(1200);
+												Panther.health = Panther.health + 13;
+												Panther.energy = Panther.energy + 4;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 2:
+											$('.cibo3').append("<a><img id='rf5' src='African-Cucumber.jpg'/></a>");
+											$('#rf5').click(function() {
+												$('#rf6').fadeOut(1200);
+												Panther.health = Panther.health + 10;
+												Panther.energy = Panther.energy - 8;
+												Panther.attack = Panther.attack + 0;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf7' src='Durian.jpg'/></a>");
+											$('#rf7').click(function() {
+												$('#rf8').fadeOut(1200);
+												Panther.health = Panther.health + 13;
+												Panther.energy = Panther.energy + 4;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf9' src='rambutan.jpg'/></a>");
+											$('#rf9').click(function() {
+												$('#rf10').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy - 2;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 3:
+											$('.cibo3').append("<a><img id='rf5' src='Durian.jpg'/></a>");
+											$('#rf5').click(function() {
+												$('#rf6').fadeOut(1200);
+												Panther.health = Panther.health + 13;
+												Panther.energy = Panther.energy + 4;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf7' src='rambutan.jpg'/></a>");
+											$('#rf7').click(function() {
+												$('#rf8').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy - 2;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf9' src='weirdone.jpg'/></a>");
+											$('#rf9').click(function() {
+												$('#rf10').fadeOut(1200);
+												Panther.health = Panther.health + 17;
+												Panther.energy = Panther.energy + 1;
+												Panther.attack = Panther.attack - 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 4:
+											$('.cibo3').append("<a><img id='rf5' src='fragole.jpg'/></a>");
+											$('#rf5').click(function() {
+												$('#rf6').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy + 20;
+												Panther.attack = Panther.attack + 3;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+										default:
+										console.log("I am not supposed to appear in game");
+									}
+
+									switch(randomFoodThree) {
+										case 0:
+											$('.cibo3').append("<a><img id='rf6' src='rambutan.jpg'/></a>");
+											$('#rf6').click(function() {
+												$('#rf5').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy - 2;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf8' src='weirdone.jpg'/></a>");
+											$('#rf8').click(function() {
+												$('#rf7').fadeOut(1200);
+												Panther.health = Panther.health + 17;
+												Panther.energy = Panther.energy + 1;
+												Panther.attack = Panther.attack - 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf10' src='African-Cucumber.jpg'/></a>");
+											$('#rf10').click(function() {
+												$('#rf9').fadeOut(1200);
+												Panther.health = Panther.health + 10;
+												Panther.energy = Panther.energy - 8;
+												Panther.attack = Panther.attack + 0;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 1:
+											$('.cibo3').append("<a><img id='rf6' src='weirdone.jpg'/></a>");
+											$('#rf6').click(function() {
+												$('#rf5').fadeOut(1200);
+												Panther.health = Panther.health + 17;
+												Panther.energy = Panther.energy + 1;
+												Panther.attack = Panther.attack - 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf8' src='African-cucumber.jpg'/></a>");
+											$('#rf8').click(function() {
+												$('#rf7').fadeOut(1200);
+												Panther.health = Panther.health + 10;
+												Panther.energy = Panther.energy - 8;
+												Panther.attack = Panther.attack + 0;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf10' src='Durian.jpg'/></a>");
+											$('#rf10').click(function() {
+												$('#rf9').fadeOut(1200);
+												Panther.health = Panther.health + 13;
+												Panther.energy = Panther.energy + 4;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 2:
+											$('.cibo3').append("<a><img id='rf6' src='African-Cucumber.jpg'/></a>");
+											$('#rf6').click(function() {
+												$('#rf5').fadeOut(1200);
+												Panther.health = Panther.health + 10;
+												Panther.energy = Panther.energy - 8;
+												Panther.attack = Panther.attack + 0;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf8' src='Durian.jpg'/></a>");
+											$('#rf8').click(function() {
+												$('#rf7').fadeOut(1200);
+												Panther.health = Panther.health + 13;
+												Panther.energy = Panther.energy + 4;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf10' src='rambutan.jpg'/></a>");
+											$('#rf10').click(function() {
+												$('#rf9').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy - 2;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 3:
+											$('.cibo3').append("<a><img id='rf6' src='Durian.jpg'/></a>");
+											$('#rf6').click(function() {
+												$('#rf5').fadeOut(1200);
+												Panther.health = Panther.health + 13;
+												Panther.energy = Panther.energy + 4;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo4').append("<a><img id='rf8' src='rambutan.jpg'/></a>");
+											$('#rf8').click(function() {
+												$('#rf7').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy - 2;
+												Panther.attack = Panther.attack + 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											$('.cibo5').append("<a><img id='rf10' src='weirdone.jpg'/></a>");
+											$('#rf10').click(function() {
+												$('#rf9').fadeOut(1200);
+												Panther.health = Panther.health + 17;
+												Panther.energy = Panther.energy + 1;
+												Panther.attack = Panther.attack - 1;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+											break;
+										case 4:
+											$('.cibo3').append("<a><img id='rf6' src='fragole.jpg'/></a>");
+											$('#rf6').click(function() {
+												$('#rf5').fadeOut(1200);
+												Panther.health = Panther.health + 15;
+												Panther.energy = Panther.energy + 20;
+												Panther.attack = Panther.attack + 3;
+												document.getElementById("health").innerHTML = Panther.health;
+												document.getElementById("energy").innerHTML = Panther.energy;
+												document.getElementById("attack").innerHTML = Panther.attack;
+											});
+										default:
+										console.log("I am not supposed to appear in game");
+									}
+
 									Abilita = Abilita + 1; //portatore di virus
 									var decrease = setInterval(function() {
 										document.getElementById("health").innerHTML = (Panther.health = Panther.health - 1);
-									},300);
-									
+									},800);
+									$('.cibo5').click(function() {
+										$('body, #health').toggleClass();
+										$('#parte9').toggle();
+										clearInterval(decrease);
+									});
 									return false;
 								}
-
 							//ultima parte prima dell incontro con l'Orso
+							});
+
+							$('#lupo').submit(function() {
+								 var ultimaScelta = $('#userchoice4').val().toUpperCase();
+								 if(ultimaScelta === "YES") {
+								 	$('#parte9').append("<p>Ehehe very well, I wait you there... you will encounter him, you will fight, and I will join.. with you</p>");
+								 }
+								 else if(ultimaScelta === "NOT") {
+								 	$('#parte9').append("<p>Tse! go head and die</p>");
+								 }
+								document.getElementById('btnlupo').disabled = 'disabled';
+
+								$('#parte10').append("<a href='#'><img id='forest' src='foforest.jpg'/></a>");
+								$('#parte10').append("<a href='#'><img class='encounter' src='incontroorso.jpg'/></a>");
+								$('#parte10 a').click(function() {
+									$(".encounter, #forest").toggle(1000);
+									return false;
+								});
+								return false;
 							});	
 						}	
 						return false;

@@ -80,7 +80,10 @@ p {
 	font-size: 18px;
 }
 
-#sceltaciboP, #Cervovivo, .roma, #risposte, #intro, #animalupdated, #vg, #parte2 h6, #cleverpath, #parte2, .cibo1, #parte3 , #parte5, #parte6, #parte7 , #parte8 {
+#sceltaciboP, #Cervovivo, .roma, #risposte, #intro,
+#animalupdated, #vg, #parte2 h6, #cleverpath, #parte2,
+.cibo1, .cibo3, .cibo4, .cibo5, #parte3,
+#parte5, #parte6, #parte7 , #parte8, #parte9 {
 	display: none;
 }
 
@@ -194,7 +197,7 @@ button {
 	font-size: 20px;
 }
 
-#rf2 , #rf4{
+#rf2 , #rf4, #rf6, #rf8, #rf10{
 	float: right;
 }
 
@@ -234,4 +237,23 @@ button {
 
 #parte7 p , #parte7 img {
 	margin-top: 20px;
+}
+
+#parte9 {
+	text-align: center;
+	margin: 0 auto;
+	height: 700px;
+}
+
+#parte9 img {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#parte10 {
+	text-align: center;
+}
+
+.encounter {
+	display: none;
 }
