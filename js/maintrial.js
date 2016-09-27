@@ -15,6 +15,7 @@ var Bear = {
 
 var Abilita = 0;
 
+
 var Main = function() {
 		// Panther is clicked and user is asked the name of it
 		$('#pantera').click(function() {
@@ -114,7 +115,7 @@ var Main = function() {
 							$('#animalupdated').fadeIn(800);
 							$('#animalupdated').append("<img src='cleverpanther.jpg'/>");
 							$('#parte2').fadeIn('slow');
-
+							
 							$('#parte2').prepend("<img src='byground.jpg'/>");
 							$('#parte2').prepend("<p>What do you choose, going through BRANCHES trees or going by GROUND?</p>");
 							$('#parte2').prepend("<p>While walking," + " " + Panther.name + " " + "encountered several obstacles, or choices maybe, the path seems to split in two, by ground looks like an affordable ravine but it will take very longer time, in the other hand we have a shortcut through branches trees</p>");
@@ -863,6 +864,7 @@ var Main = function() {
 							$('#risposte').fadeIn(1000);
 							$('#animalupdated').fadeIn(800);
 							$('#animalupdated').append("<img src='cleverpanther.jpg'/>");
+							return main();
 							console.log(Panther);
 							return false;
 						});
