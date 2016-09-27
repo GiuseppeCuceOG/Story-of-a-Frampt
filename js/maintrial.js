@@ -101,7 +101,7 @@ var Main = function() {
 								$('#animalupdated').append("<img src='weakpanther.jpg'/>");
 							}
 						}
-						else if(choice === 'SNEAKY') {//prey got by sneaking
+						else if(choice === 'SNEAKY') {// HERE IN THIS PATH
 							Panther.health = Panther.health + 15;
 							Panther.energy = Panther.energy + 5;
 							Panther.attack = Panther.attack + 1;
@@ -852,7 +852,7 @@ var Main = function() {
 							$('#animalupdated').append("<img src='weakpanther.jpg'/>");
 							return false;
 						});
-						$('#goat').click(function() {
+						$('#goat').click(function() { // WHEN THE USER CHOSE THIS PATH HE OR SHE WILL BE RESEND TO THE 104TH LINE
 							Panther.health = Panther.health + 8;
 							Panther.energy = Panther.energy + 7;
 							Panther.attack = Panther.attack + 2;
@@ -864,7 +864,7 @@ var Main = function() {
 							$('#risposte').fadeIn(1000);
 							$('#animalupdated').fadeIn(800);
 							$('#animalupdated').append("<img src='cleverpanther.jpg'/>");
-							return main();
+							
 							console.log(Panther);
 							return false;
 						});
