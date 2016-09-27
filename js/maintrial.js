@@ -798,7 +798,7 @@ var Main = function() {
 									Abilita = Abilita + 1; //portatore di virus
 									var decrease = setInterval(function() {
 										document.getElementById("health").innerHTML = (Panther.health = Panther.health - 1);
-									},800);
+									},700);
 									$('.cibo5').click(function() {
 										$('body, #health').toggleClass();
 										$('#parte9').toggle();
