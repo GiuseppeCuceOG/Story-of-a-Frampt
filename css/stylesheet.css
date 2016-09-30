@@ -1,9 +1,13 @@
 body {
-	background-color: #F2A843;
+	background-color: #20180E;
+}
+
+.noclick {
+	pointer-events: none;
 }
 
 .STAY {
-	background-color: #9C5300;
+	background-color: #200802;
 }
 
 .RED {
@@ -11,27 +15,34 @@ body {
 }
 
 #languages {
-
 	margin-left: 10px;
 	color: #EEE;
 	font-size: 12px;
 }
 
+#intro {
+	height: 160px;
+}
+
 h2 {
 	color: #EEEEEE;
 	text-align: center;
+	font-family: "Gardiendherbev2";
+	font-size: 5em;
 }
 
 h4 {
 	color: #EEE;
+	font-family: "Lucida Console";
 	margin-top: 50px;
-	margin-bottom: -50px;
+	margin-bottom: -10px;
 	text-align: center;
 }
 
 #parametri {
 	background-color: rgba(225,255,255,0.0);
 	position: fixed;
+	font-family: "Lucida Console";
 	width: 550px;
 	height: 140px;
 	margin-left: 40px;
@@ -48,16 +59,16 @@ h4 {
 	margin: 0 auto;
 	margin-top: 5px;
 	font-size: 20px;
-	color: #DDA;
+	color: #EEE;
 }
 
 div {
 	width: 580px;
 	height: 250px;
-	background-color: rgba(215,130,80,0.2);
+	background-color: rgba(215,80,40,0.0);
 	margin: 0 auto;
-	margin-top: 80px;
-	margin-bottom: 150px;
+	margin-top: 50px;
+	margin-bottom: 50px;
 	border-radius: 10px;
 }
 
@@ -71,7 +82,8 @@ div img {
 
 div p {
 	text-align: center;
-	color: #500;
+	color: #EEE;
+	font-family: "Lucida Console";
 }
 
 p {
@@ -81,15 +93,17 @@ p {
 }
 
 #sceltaciboP, #Cervovivo, .roma, #risposte, #intro,
-#animalupdated, #vg, #parte2 h6, #cleverpath, #parte2,
-.cibo1, .cibo3, .cibo4, .cibo5, #parte3,
-#parte5, #parte6, #parte7 , #parte8, #parte9 {
+#animalupdated, #vg, #parte2 h6, #cleverpath,
+#parte2, .cibo1, #cibo3, #cibo4, #cibo5, #parte3,
+#parte5, #parte6, #parte7 , #parte8, #parte9,
+#parte10, #Death {
 	display: none;
 }
 
 #sceltaciboP {
-	margin-bottom: 50px;
-	height: 500px;
+	margin-bottom: 30px;
+	width: 680px;
+	height: 470px;
 }
 
 span a #deer, span a #mushrooms {
@@ -97,12 +111,14 @@ span a #deer, span a #mushrooms {
 }
 
 .col-md-6 {
+	font-family: "Lucida Console";
 	height: 380px;
+	width: 300px;
 }
 
 .col-md-6 ol {
-	text-align: center;
 	list-style-type: none;
+	margin: 0 auto;
 	color: #EEE;
 	display: none;
 }
@@ -114,12 +130,13 @@ span a #deer, span a #mushrooms {
 #Cervovivo #cervo {
 	margin-left: 165px;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 form {
 	text-align: center;
-	margin-top: 30px;
-	margin-bottom: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 form input {
@@ -133,8 +150,8 @@ button {
 
 #VeganWay {
 	width: 800px;
-	height: 205px;
-	margin-top: 120px;
+	height: 140px;
+	margin-top: 80px;
 	margin-bottom: 40px;
 	display: none;
 }
@@ -147,7 +164,6 @@ button {
 .col-md-4 {
 	width: 300px;
 	height: 350px;
-	text-align: center;
 }
 
 #vg {
@@ -157,7 +173,7 @@ button {
 }
 
 #risposte {
-	height: 100px;
+	height: 55px;
 }
 
 #animalupdated img {
@@ -168,13 +184,20 @@ button {
 	float: right;
 }
 
-#parte2 , #parte3 {
+#parte3 {
 	text-align: center;
-	height: 1050px;
+	height: 850px;
+	color: #EEE;
 }
 
 #parte3 ol {
 	list-style-type: none;
+	font-family: "Lucida Console";
+}
+
+#parte2 {
+	text-align: center;
+	height: 760px;
 }
 
 #parte2 h3 {
@@ -184,7 +207,8 @@ button {
 }
 
 #parte2 img {
-	margin-bottom: 50px;
+	margin-top: 35px;
+	margin-bottom: 35px;
 }
 
 #parte3 img {
@@ -203,7 +227,7 @@ button {
 
 #parte4 {
 	width: 680px;
-	height: 300px;
+	height: 340px;
 	display: none;
 }
 
@@ -219,7 +243,7 @@ button {
 
 #parte5 {
 	width: 680px;
-	height: 450px;
+	height: 150px;
 }
 
 #parte5 p {
@@ -239,6 +263,10 @@ button {
 	margin-top: 20px;
 }
 
+#parte8 {
+	height: 100px;
+}
+
 #parte9 {
 	text-align: center;
 	margin: 0 auto;
@@ -252,8 +280,13 @@ button {
 
 #parte10 {
 	text-align: center;
+	height: 360px;
 }
 
 .encounter {
+	display: none;
+}
+
+#WIP {
 	display: none;
 }
