@@ -295,7 +295,9 @@ button {
 @font-face {
     font-family: 'Gardiendherbev2';
     src: url(../Gardiend-herbe.ttf);
+}
 
-    font-family: 'Lucida Console';
+@font-face {
+	font-family: 'Lucida Console';
     src: url(../lucon.ttf);
 }
