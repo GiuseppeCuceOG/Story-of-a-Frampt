@@ -476,7 +476,7 @@ var Smart = function() {
 						document.getElementById("energy").innerHTML = Panther.energy;
 						document.getElementById("attack").innerHTML = Panther.attack;
 					});
-					$('#cibo5').append("<img id='rf9' src='Durian.jpg'/>");
+					$('#cibo5').append("<img id='rf9' src='durian.jpg'/>");
 					$('#rf9').click(function() {
 						$('#rf10').fadeOut(1200);
 						Panther.health = Panther.health + 13;
@@ -498,7 +498,7 @@ var Smart = function() {
 						document.getElementById("energy").innerHTML = Panther.energy;
 						document.getElementById("attack").innerHTML = Panther.attack;
 					});
-					$('#cibo4').append("<img id='rf7' src='Durian.jpg'/>");
+					$('#cibo4').append("<img id='rf7' src='durian.jpg'/>");
 					$('#rf7').click(function() {
 						$('#rf8').fadeOut(1200);
 						Panther.health = Panther.health + 13;
@@ -520,7 +520,7 @@ var Smart = function() {
 					});
 					break;
 				case 3:
-					$('#cibo3').append("<a><img id='rf5' src='Durian.jpg'/>");
+					$('#cibo3').append("<a><img id='rf5' src='durian.jpg'/>");
 					$('#rf5').click(function() {
 						$('#rf6').fadeOut(1200);
 						Panther.health = Panther.health + 13;
@@ -620,7 +620,7 @@ var Smart = function() {
 						document.getElementById("energy").innerHTML = Panther.energy;
 						document.getElementById("attack").innerHTML = Panther.attack;
 					});
-					$('#cibo5').append("<img id='rf10' src='Durian.jpg'/>");
+					$('#cibo5').append("<img id='rf10' src='durian.jpg'/>");
 					$('#rf10').click(function() {
 						$('#rf9').fadeOut(1200);
 						Panther.health = Panther.health + 13;
@@ -642,7 +642,7 @@ var Smart = function() {
 						document.getElementById("energy").innerHTML = Panther.energy;
 						document.getElementById("attack").innerHTML = Panther.attack;
 					});
-					$('#cibo4').append("<img id='rf8' src='Durian.jpg'/>");
+					$('#cibo4').append("<img id='rf8' src='durian.jpg'/>");
 					$('#rf8').click(function() {
 						$('#rf7').fadeOut(1200);
 						Panther.health = Panther.health + 13;
@@ -664,7 +664,7 @@ var Smart = function() {
 					});
 					break;
 				case 3:
-					$('#cibo3').append("<img id='rf6' src='Durian.jpg'/>");
+					$('#cibo3').append("<img id='rf6' src='durian.jpg'/>");
 					$('#rf6').click(function() {
 						$('#rf5').fadeOut(1200);
 						Panther.health = Panther.health + 13;
