@@ -21,7 +21,7 @@ body {
 }
 
 #intro {
-	height: 160px;
+	height: 220px;
 }
 
 h2 {
@@ -124,7 +124,7 @@ span a #deer, span a #mushrooms {
 }
 
 #Cervovivo {
-	height: 550px;
+	height: 570px;
 }
 
 #Cervovivo #cervo {
@@ -186,7 +186,7 @@ button {
 
 #parte3 {
 	text-align: center;
-	height: 850px;
+	height: 920px;
 	color: #EEE;
 }
 
@@ -197,7 +197,7 @@ button {
 
 #parte2 {
 	text-align: center;
-	height: 760px;
+	height: 800px;
 }
 
 #parte2 h3 {
@@ -256,7 +256,7 @@ button {
 
 #parte7 {
 	text-align: center;
-	height: 580px;
+	height: 660px;
 }
 
 #parte7 p , #parte7 img {
