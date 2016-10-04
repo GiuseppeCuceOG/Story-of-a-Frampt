@@ -15,6 +15,17 @@ var Bear = {
 
 var Abilita = 0;
 
+var Strong = function() {
+	$('#strongPath').append("<p>You got your instinct back, You have some flashback about your past, It was anything good, a huge animal was fighting against you, but it is all about you can remember</p>");
+	$('#strongPath').append("<p>But! your actions annoyed a Giant Snake and it is going to attack you!</p>");
+	$('#strongPath').append("<img id='Serpe' src='giantserpent.jpg'/>").append("<img class='pull-right' src='strongpa.jpg'/>").append("<ol><li>Health: 50</li><li>Energy: 30</li><li>Attack: 3</li><li>Special Skill: Lethal Bite</li></ol>");
+	$('#strongForm, #strongPath').toggle();
+	$('#Serpe').mouseenter(function() {
+			$('#strongPath ol').toggle();
+		}).mouseleave(function() {
+			$('#strongPath ol').toggle();
+		});
+}
 
 
 var Smart = function() {
@@ -417,7 +428,7 @@ var Smart = function() {
 		}
 		else if(choiceThree === "STAY") {
 			//do something
-			$('#cibo3, #cibo4, #cibo5').toggle();
+			$('#cibo3, #cibo4, #cibo5, #sceltadigruppo').toggle();
 			$('#parte8').toggle();
 			$('#parte8').append("<p>It seems you got a virus! your health is decreasing constantly, you need to survival, there are very strange fruit here, no time to think, feed yourself!, hurry! </p>");
 			$('body').toggleClass("STAY",3000);
@@ -807,7 +818,7 @@ var Main = function() {
 					
 					if(choice === 'DIRECT') {
 						document.getElementById("btnrequest").disabled = true;
-						var escapeDeer = Math.random()*9; //capability for deer to escape
+						var escapeDeer = Math.random()*1; //capability for deer to escape
 						if(Panther.attack > escapeDeer) { //if it gets the prey
 							Panther.health = Panther.health + 20;
 							Panther.energy = Panther.energy + 10;
@@ -819,7 +830,10 @@ var Main = function() {
 							$('#risposte').fadeIn(1000);
 							$('#animalupdated').fadeIn(800);
 							$('#animalupdated').append("<img src='strongpa.jpg'/>");
-							$('#WIP').fadeIn('slow');
+							var C = function() {	
+								Strong();
+							}
+							C();
 						}
 						else { //missed the prey
 							Panther.health = Panther.health - 4;

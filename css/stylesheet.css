@@ -65,7 +65,7 @@ h4 {
 div {
 	width: 580px;
 	height: 250px;
-	background-color: rgba(215,80,40,0.0);
+	background-color: rgba(215,80,40,0.5);
 	margin: 0 auto;
 	margin-top: 50px;
 	margin-bottom: 50px;
@@ -96,7 +96,7 @@ p {
 #animalupdated, #vg, #parte2 h6, #cleverpath,
 #parte2, .cibo1, #cibo3, #cibo4, #cibo5, #parte3,
 #parte5, #parte6, #parte7 , #parte8, #parte9,
-#parte10, #Death {
+#parte10, #Death, #strongForm, #sceltadigruppo, #strongPath {
 	display: none;
 }
 
@@ -187,6 +187,24 @@ button {
 #sceltadigruppo {
 	height: 1050px;
 }
+
+#strongPath {
+	height: 550px;
+}
+
+#strongPath img {
+	margin-top: 30px;
+}
+
+#strongPath ol{
+	display: none;
+	margin-top: 20px;
+	font-family: 'Lucida Console';
+	list-style-type: none;
+	float: left;
+	color: #EEE;
+}
+
 
 #parte3 {
 	text-align: center;
@@ -294,7 +312,6 @@ button {
 #WIP {
 	display: none;
 }
-
 
 @font-face {
     font-family: 'Gardiendherbev2';
