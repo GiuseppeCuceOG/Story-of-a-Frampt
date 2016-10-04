@@ -715,7 +715,8 @@ var Smart = function() {
 				document.getElementById("health").innerHTML = (Panther.health = Panther.health - 1);
 				if(Panther.health <= 0) {
 					clearInterval(decrease);
-					$('#Death').append('<p>You Died Poisoned!</p>').fadeIn('slow');;
+					$('#sceltadigruppo').toggleClass('Death')
+					$('.Death').toggle(500);;
 					return false;
 				}
 			},500);
